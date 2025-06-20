@@ -1,8 +1,5 @@
-// script.js
 
-// Wait for the DOM to be fully loaded before running the script
 document.addEventListener("DOMContentLoaded", () => {
-  // --- DOM Element References ---
   const themeToggle = document.getElementById("theme-toggle");
   const html = document.documentElement;
   const sections = document.querySelectorAll(".section");
@@ -13,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  // --- Global State Variables ---
   let userPosition = null;
   let userMarker = null;
   let userPath = null;
@@ -23,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let routeLayer = null;
   let selectedDuration = 15; // Default duration
 
-  // --- Theme Toggle ---
   const applyTheme = () => {
     if (
       localStorage.getItem("theme") === "dark" ||
@@ -44,12 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  // --- Mobile Menu Toggle ---
   mobileMenuButton.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
   });
 
-  // --- Section Intersection Observer for Animations ---
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -62,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   sections.forEach((section) => observer.observe(section));
 
-  // --- Geolocation ---
   const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -73,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
           document.getElementById("longitude").textContent =
             position.coords.longitude.toFixed(6);
 
-          // Initialize maps only after getting the location
           if (!trackerMap) initTrackerMap();
           if (!routeMap) initRouteMap();
         },

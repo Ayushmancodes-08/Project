@@ -1,4 +1,3 @@
-/* style.css */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
@@ -9,13 +8,11 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* --- Dark Mode Base --- */
 .dark body {
   background-color: #0f172a;
   color: #f8fafc;
 }
 
-/* --- Section Fade-in Animation --- */
 .section {
   opacity: 0;
   transform: translateY(20px);
@@ -27,7 +24,6 @@ body {
   transform: translateY(0);
 }
 
-/* --- SOS Button Pulse Animation --- */
 .sos-btn {
   box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
   animation: pulse-slow 2s infinite;
@@ -37,7 +33,6 @@ body {
   transform: scale(0.95);
 }
 
-/* --- Component Hover & Dark Mode Styles --- */
 .contact-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
@@ -69,7 +64,6 @@ body {
   background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
 }
 
-/* --- Leaflet Map Custom Styles --- */
 .leaflet-container {
   background-color: #f8fafc;
 }
@@ -78,7 +72,6 @@ body {
   background-color: #1e293b;
 }
 
-/* Animated route path */
 .path-highlight {
   stroke: #8b5cf6;
   stroke-width: 6;
@@ -103,7 +96,6 @@ body {
   box-shadow: 0 0 0 3px #8b5cf6;
 }
 
-/* Custom live tracking marker with pulse */
 .live-tracker-icon {
   background-color: #ec4899;
   border-radius: 50%;
@@ -126,7 +118,6 @@ body {
   }
 }
 
-/* --- Custom Toggle Switch (for Share Location) --- */
 .switch {
   position: relative;
   display: inline-block;
